@@ -16,6 +16,6 @@ make dev
 
 Run individually:
 ``` bash
-make frontend # Vite dev server
-make backend  # Go server
+make frontend 
+make backend 
 ```
