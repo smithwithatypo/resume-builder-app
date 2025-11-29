@@ -1,13 +1,21 @@
 package main
 
 import (
+	"log"
+	"net/http"
+
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
-	"net/http"
+	"github.com/joho/godotenv"
+	"github.com/smithwithatypo/resume-builder-app/handlers"
 )
 
 func main() {
+	if err := godotenv.Load(); err != nil {
+		log.Println("No .env file found")
+	}
+
 	r := chi.NewRouter()
 
 	// Middleware
@@ -21,6 +29,8 @@ func main() {
 	r.Get("/api/health", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("ok"))
 	})
+
+	r.Post("/api/summarize", handlers.SummarizeJobDescription)
 
 	http.ListenAndServe(":8080", r)
 }
