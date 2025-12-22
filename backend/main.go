@@ -8,7 +8,7 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
 	"github.com/joho/godotenv"
-	"github.com/smithwithatypo/resume-builder-app/handlers"
+	"github.com/smithwithatypo/resume-builder-app/internal/handlers"
 )
 
 func main() {
@@ -31,6 +31,7 @@ func main() {
 	})
 
 	r.Post("/api/summarize", handlers.SummarizeJobDescription)
+	r.Post("/api/chat", handlers.HandleChat)
 
 	http.ListenAndServe(":8080", r)
 }
