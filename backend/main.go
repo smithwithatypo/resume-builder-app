@@ -30,6 +30,7 @@ func main() {
 		w.Write([]byte("ok"))
 	})
 
+	// Routes
 	r.Post("/api/summarize", handlers.SummarizeJobDescription)
 	r.Post("/api/chat", handlers.HandleChat)
 
