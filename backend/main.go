@@ -33,6 +33,7 @@ func main() {
 	// Routes
 	r.Post("/api/summarize", handlers.SummarizeJobDescription)
 	r.Post("/api/chat", handlers.HandleChat)
+	r.Post("/api/projects/match", handlers.MatchProjects)
 
 	http.ListenAndServe(":8080", r)
 }

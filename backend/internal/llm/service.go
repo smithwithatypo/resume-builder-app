@@ -19,6 +19,10 @@ func NewConversation(systemPrompt string) *Conversation {
 		option.WithAPIKey(os.Getenv("ANTHROPIC_API_KEY")),
 	)
 
+	if systemPrompt == "" {
+		systemPrompt = "be a helpful assistant"
+	}
+
 	return &Conversation{
 		client:   client,
 		system:   systemPrompt,
@@ -26,7 +30,7 @@ func NewConversation(systemPrompt string) *Conversation {
 	}
 }
 
-func (c *Conversation) AddUser(content string) {
+func (c *Conversation) AddUserMessage(content string) {
 	c.messages = append(c.messages, anthropic.NewUserMessage(
 		anthropic.NewTextBlock(content),
 	))
@@ -34,7 +38,7 @@ func (c *Conversation) AddUser(content string) {
 
 func (c *Conversation) Send() (string, error) {
 	msg, err := c.client.Messages.New(context.Background(), anthropic.MessageNewParams{
-		Model:     anthropic.ModelClaude3_5HaikuLatest,
+		Model:     anthropic.ModelClaudeHaiku4_5,
 		MaxTokens: 1024,
 		System: []anthropic.TextBlockParam{
 			{Text: c.system},

@@ -1,0 +1,287 @@
+[
+  {
+    "id": 1,
+    "title": "dell ai legal automation",
+    "keywords": [
+      "ai",
+      "llm",
+      "python",
+      "streamlit",
+      "kubernetes",
+      "docker"
+    ],
+    "summary": "Automated legal review for $2.4B pipeline, saved 7hrs/week per salesperson"
+  },
+  {
+    "id": 2,
+    "title": "dell survey analysis",
+    "keywords": [
+      "nlp",
+      "ux",
+      "python"
+    ],
+    "summary": "Analyzed 80 surveys to improve UX with auto-population features"
+  },
+  {
+    "id": 3,
+    "title": "dell SRE full-stack",
+    "keywords": [
+      "full stack development",
+      "angular",
+      "node.js",
+      "sql",
+      "nosql",
+      "process optimization",
+      "sre",
+      "pivotal cloud foundry"
+    ],
+    "summary": "Reduced order support resolution time by 12 hours/week globally with unified search interface"
+  },
+  {
+    "id": 4,
+    "title": "dell script for database reconciliation",
+    "keywords": [
+      "python",
+      "database synchronization",
+      "process automation",
+      "sre",
+      "http api"
+    ],
+    "summary": "Automated database sync via API, saved 5 hours/week of manual effort"
+  },
+  {
+    "id": 23,
+    "title": "ETL Tests",
+    "keywords": [
+      "etl",
+      "data lake",
+      "C# .NET",
+      "Kafka",
+      "sql",
+      "nosql",
+      "json",
+      "big data",
+      "elasticsearch",
+      "stream processing"
+    ],
+    "summary": "Enabled real-time streaming architecture migration for 300M customer record datalake"
+  },
+  {
+    "id": 5,
+    "title": "automate team matching process",
+    "keywords": [
+      "hackathon",
+      "process automation",
+      "data modeling",
+      "backend development",
+      "python",
+      "object oriented programming"
+    ],
+    "summary": "Won 1st place hackathon automating new-hire to manager assignment"
+  },
+  {
+    "id": 6,
+    "title": "AI computer science tutor",
+    "keywords": [
+      "ai",
+      "llm",
+      "angular",
+      "node.js",
+      "full-stack development",
+      "agile",
+      "ci/cd"
+    ],
+    "summary": "Secured $10k funding, built AI tutoring platform serving 200 CS students with 90%+ satisfaction"
+  },
+  {
+    "id": 7,
+    "title": "Mobile app for Meals on Wheels",
+    "keywords": [
+      "react native",
+      "django",
+      "python",
+      "full-stack development",
+      "agile",
+      "git",
+      "leadership",
+      "code reviews"
+    ],
+    "summary": "Delivered features for $5M nutrition platform serving 5000 seniors, led cross-functional team"
+  },
+  {
+    "id": 8,
+    "title": "medical computer vision",
+    "keywords": [
+      "ai",
+      "deep learning",
+      "python",
+      "tensorflow",
+      "machine learning",
+      "automation",
+      "distributed computing",
+      "computer vision"
+    ],
+    "summary": "Automated data augmentation pipeline with custom CNNs across 8 GPUs"
+  },
+  {
+    "id": 9,
+    "title": "aquaponic farm automation",
+    "keywords": [
+      "iot",
+      "system architecture",
+      "python",
+      "distributed systems",
+      "fault tolerance",
+      "automation",
+      "cloud",
+      "reliability",
+      "cross-functional collaboration",
+      "risk analysis"
+    ],
+    "summary": "Redesigned raspberry pi network from 0% to resilient fault-tolerant operation, co-authored peer-reviewed publication"
+  },
+  {
+    "id": 10,
+    "title": "teaching assistant",
+    "keywords": [
+      "teaching",
+      "python",
+      "full-stack",
+      "code reviews",
+      "automation"
+    ],
+    "summary": "Taught 80 students, automated grading with unit tests saving 60% time (15+ hours per cycle)"
+  },
+  {
+    "id": 11,
+    "title": "google club",
+    "keywords": [
+      "machine learning",
+      "cloud computing",
+      "leadership",
+      "data-driven",
+      "app development",
+      "project management"
+    ],
+    "summary": "Founded CS club with Google, grew to 400+ members with 40+ events, 2 hackathons"
+  },
+  {
+    "id": 12,
+    "title": "ieee club",
+    "keywords": [
+      "leadership",
+      "project management",
+      "team management",
+      "technical education"
+    ],
+    "summary": "Led 17 officers, grew to 20-70 weekly attendees and 7 robotics teams"
+  },
+  {
+    "id": 25,
+    "title": "fraud investigator",
+    "keywords": [
+      "risk management",
+      "data analysis",
+      "process optimization",
+      "quality assurance"
+    ],
+    "summary": "Actioned 50+ cases daily at 99%+ accuracy, saving $1B annually"
+  },
+  {
+    "id": 26,
+    "title": "tribal knowledge",
+    "keywords": [
+      "process optimization",
+      "risk mitigation",
+      "cross-functional leadership",
+      "project management"
+    ],
+    "summary": "Created secure tribal knowledge database for 140 team members with 40 productivity optimizations"
+  },
+  {
+    "id": 27,
+    "title": "program manager at apple",
+    "keywords": [
+      "program management",
+      "cross-functional collaboration",
+      "process optimization",
+      "stakeholder engagement"
+    ],
+    "summary": "Organized 250 community service events engaging 1200+ employees over 3 years"
+  },
+  {
+    "id": 14,
+    "title": "french with ai",
+    "keywords": [
+      "ai",
+      "full-stack development",
+      "golang",
+      "react",
+      "ci/cd pipeline"
+    ],
+    "summary": "Built AI French learning app saving 20 min/hour of study time with Go, React, Docker on Railway"
+  },
+  {
+    "id": 16,
+    "title": "learn docker",
+    "keywords": [
+      "docker",
+      "database",
+      "container orchestration"
+    ],
+    "summary": "Built Docker playground with multi-container architecture for learning networking and security"
+  },
+  {
+    "id": 17,
+    "title": "computersmyth",
+    "keywords": [
+      "web development",
+      "open source",
+      "mentoring"
+    ],
+    "summary": "Created platform with 10+ apps, coding templates, and tutorials for developers"
+  },
+  {
+    "id": 18,
+    "title": "resume builder",
+    "keywords": [
+      "ai",
+      "llm",
+      "python",
+      "streamlit"
+    ],
+    "summary": "Built LLM-powered app to match projects to job descriptions, saving 2+ hours per application"
+  },
+  {
+    "id": 20,
+    "title": "python algorithm snippets",
+    "keywords": [
+      "python",
+      "angular",
+      "algorithms",
+      "data structures"
+    ],
+    "summary": "Searchable collection of Python code snippets reducing study time by 20%"
+  },
+  {
+    "id": 21,
+    "title": "txst cs student guide",
+    "keywords": [
+      "angular",
+      "react",
+      "education",
+      "web development"
+    ],
+    "summary": "Built app linking 40+ free tools for 100+ CS students"
+  },
+  {
+    "id": 22,
+    "title": "project prioritizer",
+    "keywords": [
+      "angular",
+      "prioritization",
+      "process optimization"
+    ],
+    "summary": "Eisenhower Matrix app for ranking projects and identifying next actions"
+  }
+]

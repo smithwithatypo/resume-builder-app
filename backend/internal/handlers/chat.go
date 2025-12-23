@@ -25,7 +25,7 @@ func HandleChat(w http.ResponseWriter, r *http.Request) {
 	prompt := "you are a helpful assistant"
 	convo := llm.NewConversation(prompt)
 
-	convo.AddUser(req.Message)
+	convo.AddUserMessage(req.Message)
 	reply, err := convo.Send()
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
