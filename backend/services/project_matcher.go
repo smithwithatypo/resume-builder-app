@@ -15,17 +15,10 @@ func BuildMatchPrompt(jobDesc string, projects []models.Project) string {
 	return fmt.Sprintf(`You are helping match resume projects to a job description. do not add markdown or code blocks.
 
 Your task: Return a valid JSON format with:
-1. "projectIds": array of matching project IDs, ordered by relevance
-2. "topMatches": array of objects explaining the top 3 matches
+"projectIds": array of matching project IDs, ordered by relevance
 
 Output format:
-{
-  "projectIds": [1,2,5,8],
-  "topMatches": [
-    {"id": 1, "reason": "Direct match: AI/LLM automation"},
-    {"id": 2, "reason": "NLP and data analysis experience"}
-  ]
-}
+{"projectIds": [1,2,5,8]}
 
 Job Description:
 %s

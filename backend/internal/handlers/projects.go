@@ -13,18 +13,8 @@ type ProjectRequest struct {
 	JobDescription string `json:"jobDescription"`
 }
 
-// type ProjectsResponse struct {
-// 	Response MatchResult `string:"response"`
-// }
-
-type ProjectMatch struct {
-	ID     int    `json:"id"`
-	Reason string `json:"reason"`
-}
-
 type MatchResult struct {
-	ProjectIds []int          `json:"projectIds"`
-	TopMatches []ProjectMatch `json:"topMatches"`
+	ProjectIds []int `json:"projectIds"`
 }
 
 func MatchProjects(w http.ResponseWriter, r *http.Request) {
@@ -59,7 +49,7 @@ func MatchProjects(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// get project data
-	fullProjects, err := services.GetProjectsByIDs(result.ProjectIds)
+	fullProjectsPrioritized, err := services.GetProjectsByIDs(result.ProjectIds)
 	if err != nil {
 		http.Error(w, "Failed to get projects", http.StatusInternalServerError)
 		return
@@ -67,5 +57,5 @@ func MatchProjects(w http.ResponseWriter, r *http.Request) {
 
 	// send response
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(fullProjects)
+	json.NewEncoder(w).Encode(fullProjectsPrioritized)
 }
