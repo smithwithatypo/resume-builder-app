@@ -10,7 +10,14 @@
       "kubernetes",
       "docker"
     ],
-    "summary": "Automated legal review for $2.4B pipeline, saved 7hrs/week per salesperson"
+    "summary": "Automated legal review for $2.4B pipeline, saved 7hrs/week per salesperson",
+    "bulletpoints": [
+      {
+        "result": "automated legal review process of SOW contract negotiations for $2.4B enterprise sales pipeline",
+        "metric": "saved 7 hours/week/salesperson",
+        "action": "by designing, developing, and deploying an AI / NLP app on an internal Kubernetes cluster."
+      }
+    ]
   },
   {
     "id": 2,
@@ -20,7 +27,14 @@
       "ux",
       "python"
     ],
-    "summary": "Analyzed 80 surveys to improve UX with auto-population features"
+    "summary": "Analyzed 80 surveys to improve UX with auto-population features",
+    "bulletpoints": [
+      {
+        "result": "Business and developers improved user experience through app enhancements (auto-population features and increased speed)",
+        "metric": "80 enterprise sales agent surveys analyzed",
+        "action": "Analyzed unstructured survey data from internal app using NLP and manual review"
+      }
+    ]
   },
   {
     "id": 3,
@@ -35,7 +49,14 @@
       "sre",
       "pivotal cloud foundry"
     ],
-    "summary": "Reduced order support resolution time by 12 hours/week globally with unified search interface"
+    "summary": "Reduced order support resolution time by 12 hours/week globally with unified search interface",
+    "bulletpoints": [
+      {
+        "result": "Reduced order support resolution time by 12 hours per week per person globally",
+        "metric": "12 hours/week/person time savings across global support teams",
+        "action": "Developed a full-stack order lookup feature combining 7 queries in several different databases into a unified search interface for LATAM orders blocked by nuanced compliance issues"
+      }
+    ]
   },
   {
     "id": 4,
@@ -47,7 +68,14 @@
       "sre",
       "http api"
     ],
-    "summary": "Automated database sync via API, saved 5 hours/week of manual effort"
+    "summary": "Automated database sync via API, saved 5 hours/week of manual effort",
+    "bulletpoints": [
+      {
+        "result": "Automated database synchronization process, eliminating manual data validation work",
+        "metric": "Saved 5 hours per week of manual effort",
+        "action": "Developed and deployed a Python automation script that monitors database discrepancies and triggers automatic updates via internal API calls"
+      }
+    ]
   },
   {
     "id": 23,
@@ -64,7 +92,14 @@
       "elasticsearch",
       "stream processing"
     ],
-    "summary": "Enabled real-time streaming architecture migration for 300M customer record datalake"
+    "summary": "Enabled real-time streaming architecture migration for 300M customer record datalake",
+    "bulletpoints": [
+      {
+        "result": "Enabled transition from legacy batch-processing ETL to real-time streaming architecture for 300M customer record datalake",
+        "metric": "eliminated a 5-minute batch processing window for 300M customer records",
+        "action": "Developed tests for an ETL pipeline migration, validated SQL/NoSQL data models, and implemented testing framework for C# .NET solution with Kafka queue integration"
+      }
+    ]
   },
   {
     "id": 5,
@@ -77,7 +112,14 @@
       "python",
       "object oriented programming"
     ],
-    "summary": "Won 1st place hackathon automating new-hire to manager assignment"
+    "summary": "Won 1st place hackathon automating new-hire to manager assignment",
+    "bulletpoints": [
+      {
+        "result": "Won first place in company-wide hackathon among all Dell interns",
+        "metric": "1st place",
+        "action": "Designed and implemented an automated matching system replacing manual new-hire to manager assignment process using survey data and algorithmic optimization"
+      }
+    ]
   },
   {
     "id": 6,
@@ -91,7 +133,19 @@
       "agile",
       "ci/cd"
     ],
-    "summary": "Secured $10k funding, built AI tutoring platform serving 200 CS students with 90%+ satisfaction"
+    "summary": "Secured $10k funding, built AI tutoring platform serving 200 CS students with 90%+ satisfaction",
+    "bulletpoints": [
+      {
+        "result": "secured $10,000 research funding and delivered a full-stack AI tutoring platform",
+        "metric": "served 200 CS students across multiple courses, achieving over 90% user satisfaction based on 40 pages of qualitative feedback analysis",
+        "action": "built an AI tutoring app using Angular, Node.js, PostgreSQL, and OpenAI API"
+      },
+      {
+        "result": "deployed MVP to 200 students by our academic deadline while keeping additional features as future development tracks",
+        "metric": "200 students used it",
+        "action": "Architected modular system design with agile CI/CD pipelines that isolated the core tutoring engine from stakeholders' requested add-on features (anti-cheat, teacher analytics)"
+      }
+    ]
   },
   {
     "id": 7,
@@ -106,7 +160,19 @@
       "leadership",
       "code reviews"
     ],
-    "summary": "Delivered features for $5M nutrition platform serving 5000 seniors, led cross-functional team"
+    "summary": "Delivered features for $5M nutrition platform serving 5000 seniors, led cross-functional team",
+    "bulletpoints": [
+      {
+        "result": "delivered user-facing features for elderly nutrition platform",
+        "metric": "served 5000 seniors in central texas through a $5M federally-funded project",
+        "action": "by coordinating and mentoring a cross-functional team of frontend and backend engineers"
+      },
+      {
+        "result": "Improved code quality and team velocity",
+        "metric": "by conducting 50+ code reviews",
+        "action": "by implementing Agile project management, mentoring 2 engineers in Git workflows, and translating stakeholder requirements into technical specifications"
+      }
+    ]
   },
   {
     "id": 8,
@@ -121,7 +187,14 @@
       "distributed computing",
       "computer vision"
     ],
-    "summary": "Automated data augmentation pipeline with custom CNNs across 8 GPUs"
+    "summary": "Automated data augmentation pipeline with custom CNNs across 8 GPUs",
+    "bulletpoints": [
+      {
+        "result": "Automated a data augmentation pipeline for medical computer vision research",
+        "metric": "",
+        "action": "by building a distributed infrastructure across 8 GPUs training custom convolutional neural networks from scratch using Tensorflow"
+      }
+    ]
   },
   {
     "id": 9,
@@ -138,7 +211,19 @@
       "cross-functional collaboration",
       "risk analysis"
     ],
-    "summary": "Redesigned raspberry pi network from 0% to resilient fault-tolerant operation, co-authored peer-reviewed publication"
+    "summary": "Redesigned raspberry pi network from 0% to resilient fault-tolerant operation, co-authored peer-reviewed publication",
+    "bulletpoints": [
+      {
+        "result": "Eliminated single point of failure crashes that previously brought down entire farm",
+        "metric": "Improved system reliability from 0% fault tolerance to resilient multi-node operation supporting 40+ plants and dozens of fish",
+        "action": "Redesigned raspberry pi network architecture from daisy-chain to fault-tolerant client/server system"
+      },
+      {
+        "result": "Identified high-risk subsystems and implemented targeted risk mitigations",
+        "metric": "Co-authored peer-reviewed publication with graduate student",
+        "action": "Published research on FMEA and Digital Twin methodologies for complex system risk analysis"
+      }
+    ]
   },
   {
     "id": 10,
@@ -150,7 +235,19 @@
       "code reviews",
       "automation"
     ],
-    "summary": "Taught 80 students, automated grading with unit tests saving 60% time (15+ hours per cycle)"
+    "summary": "Taught 80 students, automated grading with unit tests saving 60% time (15+ hours per cycle)",
+    "bulletpoints": [
+      {
+        "result": "Enhanced student understanding of production-ready software development practices",
+        "metric": "80 students across 2 semesters",
+        "action": "Taught full-stack software engineering principles and conducted code reviews for student projects"
+      },
+      {
+        "result": "Improved grading workflow and consistency",
+        "metric": "by 60% (15+ hours per assignment cycle)",
+        "action": "by developing an automated unit testing framework to grade assignments"
+      }
+    ]
   },
   {
     "id": 11,
@@ -163,7 +260,19 @@
       "app development",
       "project management"
     ],
-    "summary": "Founded CS club with Google, grew to 400+ members with 40+ events, 2 hackathons"
+    "summary": "Founded CS club with Google, grew to 400+ members with 40+ events, 2 hackathons",
+    "bulletpoints": [
+      {
+        "result": "Founded and scaled a computer science club with Google",
+        "metric": "grew from 0 to 400+ members within a year",
+        "action": "by recruiting 10 officers and leading workshops in modern software skills like machine learning, cloud, app development, and interview prep"
+      },
+      {
+        "result": "improved student retention and industry readiness",
+        "metric": "as measured by positive survey sentiments after 40 events, 2 hackathons, a Google campus visit, and a freshman orientation with 300 attendees",
+        "action": "by leading 40+ technical and social events events in a year"
+      }
+    ]
   },
   {
     "id": 12,
@@ -174,7 +283,14 @@
       "team management",
       "technical education"
     ],
-    "summary": "Led 17 officers, grew to 20-70 weekly attendees and 7 robotics teams"
+    "summary": "Led 17 officers, grew to 20-70 weekly attendees and 7 robotics teams",
+    "bulletpoints": [
+      {
+        "result": "boosted student engagement and education",
+        "metric": "with 20-70 weekly attendees, 7 robotics teams, and increased organizational funds by 17% (from $6k to $7k)",
+        "action": "by leading a team of 17 officers to create weekly technical, social, and fundraising events"
+      }
+    ]
   },
   {
     "id": 25,
@@ -185,7 +301,14 @@
       "process optimization",
       "quality assurance"
     ],
-    "summary": "Actioned 50+ cases daily at 99%+ accuracy, saving $1B annually"
+    "summary": "Actioned 50+ cases daily at 99%+ accuracy, saving $1B annually",
+    "bulletpoints": [
+      {
+        "result": "Mitigated financial risk to the company and customers",
+        "metric": "saving $1 billion of damages annually",
+        "action": "by actioning 50+ cases daily at over 99% accuracy and training all the teams of North America"
+      }
+    ]
   },
   {
     "id": 26,
@@ -196,7 +319,14 @@
       "cross-functional leadership",
       "project management"
     ],
-    "summary": "Created secure tribal knowledge database for 140 team members with 40 productivity optimizations"
+    "summary": "Created secure tribal knowledge database for 140 team members with 40 productivity optimizations",
+    "bulletpoints": [
+      {
+        "result": "Solved leadership's biggest struggle",
+        "metric": "for 140 team members teaching 40 productivity optimizations",
+        "action": "by creating a database of tribal knowledge while mitigating the risk of this data being useful to any criminals who might gain access to it"
+      }
+    ]
   },
   {
     "id": 27,
@@ -207,7 +337,14 @@
       "process optimization",
       "stakeholder engagement"
     ],
-    "summary": "Organized 250 community service events engaging 1200+ employees over 3 years"
+    "summary": "Organized 250 community service events engaging 1200+ employees over 3 years",
+    "bulletpoints": [
+      {
+        "result": "improved employee engagement and corporate giving",
+        "metric": "engaging 1200+ unique employees",
+        "action": "by organizing 250 community service events across 3 years"
+      }
+    ]
   },
   {
     "id": 14,
@@ -219,7 +356,14 @@
       "react",
       "ci/cd pipeline"
     ],
-    "summary": "Built AI French learning app saving 20 min/hour of study time with Go, React, Docker on Railway"
+    "summary": "Built AI French learning app saving 20 min/hour of study time with Go, React, Docker on Railway",
+    "bulletpoints": [
+      {
+        "result": "improved the experience of learning French",
+        "metric": "by saving an average 20 minutes of lookup time per 1 hour of studying",
+        "action": "by developing a full-stack AI-powered app using Go, React, generative AI, and Docker with an automated CI/CD pipeline deployment on Railway"
+      }
+    ]
   },
   {
     "id": 16,
@@ -229,7 +373,14 @@
       "database",
       "container orchestration"
     ],
-    "summary": "Built Docker playground with multi-container architecture for learning networking and security"
+    "summary": "Built Docker playground with multi-container architecture for learning networking and security",
+    "bulletpoints": [
+      {
+        "result": "learned nuanced Docker networking and security",
+        "metric": "reducing risk of bringing down production by 100%",
+        "action": "by developing a Docker playground environment with multi-container architecture including frontend, backend, database services, and environment variables"
+      }
+    ]
   },
   {
     "id": 17,
@@ -239,7 +390,14 @@
       "open source",
       "mentoring"
     ],
-    "summary": "Created platform with 10+ apps, coding templates, and tutorials for developers"
+    "summary": "Created platform with 10+ apps, coding templates, and tutorials for developers",
+    "bulletpoints": [
+      {
+        "result": "Increased access to computer science resources",
+        "metric": "of 10+ apps, coding templates, and tutorials for full-stack software development",
+        "action": "by creating a web platform for developers to freely access everything I've published"
+      }
+    ]
   },
   {
     "id": 18,
@@ -250,7 +408,14 @@
       "python",
       "streamlit"
     ],
-    "summary": "Built LLM-powered app to match projects to job descriptions, saving 2+ hours per application"
+    "summary": "Built LLM-powered app to match projects to job descriptions, saving 2+ hours per application",
+    "bulletpoints": [
+      {
+        "result": "reduced the time it takes to customize resumes for each job opening",
+        "metric": "by 2+ hours per application",
+        "action": "by coding a full-stack app that uses large language models to synthesize keywords from the job description, then references a list of all my projects with keywords, then ranks which projects are most relevant to this specific position"
+      }
+    ]
   },
   {
     "id": 20,
@@ -261,7 +426,14 @@
       "algorithms",
       "data structures"
     ],
-    "summary": "Searchable collection of Python code snippets reducing study time by 20%"
+    "summary": "Searchable collection of Python code snippets reducing study time by 20%",
+    "bulletpoints": [
+      {
+        "result": "Reduced the study time of advanced data structures and algorithms",
+        "metric": "by 20% (estimated)",
+        "action": "by developing and deploying an app that collects the most useful Python code snippets and makes them easily searchable using a filter and keywords."
+      }
+    ]
   },
   {
     "id": 21,
@@ -272,7 +444,14 @@
       "education",
       "web development"
     ],
-    "summary": "Built app linking 40+ free tools for 100+ CS students"
+    "summary": "Built app linking 40+ free tools for 100+ CS students",
+    "bulletpoints": [
+      {
+        "result": "Increased access to educational resources to underprivileged students",
+        "metric": "engaging 100+ CS students at my university",
+        "action": "by developing an app that linked to 40+ free online tools that upper-classmen, professors, and professionals found most useful in their success journeys"
+      }
+    ]
   },
   {
     "id": 22,
@@ -282,6 +461,13 @@
       "prioritization",
       "process optimization"
     ],
-    "summary": "Eisenhower Matrix app for ranking projects and identifying next actions"
+    "summary": "Eisenhower Matrix app for ranking projects and identifying next actions",
+    "bulletpoints": [
+      {
+        "result": "Reduced decision fatigue and time-to-action for people with multiple competing projects",
+        "metric": "",
+        "action": "by coding a lightweight app that uses the Eisenhower Matrix to rank all your projects in order of highest priority and gives you a clear actionable step for each project"
+      }
+    ]
   }
 ]

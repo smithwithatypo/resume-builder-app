@@ -13,9 +13,9 @@ type ProjectRequest struct {
 	JobDescription string `json:"jobDescription"`
 }
 
-type ProjectsResponse struct {
-	Response MatchResult `string:"response"`
-}
+// type ProjectsResponse struct {
+// 	Response MatchResult `string:"response"`
+// }
 
 type ProjectMatch struct {
 	ID     int    `json:"id"`
@@ -58,7 +58,14 @@ func MatchProjects(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// get project data
+	fullProjects, err := services.GetProjectsByIDs(result.ProjectIds)
+	if err != nil {
+		http.Error(w, "Failed to get projects", http.StatusInternalServerError)
+		return
+	}
+
 	// send response
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(ProjectsResponse{Response: result})
+	json.NewEncoder(w).Encode(fullProjects)
 }
