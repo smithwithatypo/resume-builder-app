@@ -1,4 +1,3 @@
-import './App.css'
 import JobMatcher from './components/JobMatcher'
 
 function App() {
