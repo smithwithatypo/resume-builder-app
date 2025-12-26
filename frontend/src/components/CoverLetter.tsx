@@ -40,6 +40,12 @@ export default function CoverLetterGenerator() {
             placeholder="Paste job description here..."
             value={jobDescription}
             onChange={(e) => setJobDescription(e.target.value)}
+            onKeyDown={(e) => {
+              if ((e.metaKey || e.ctrlKey) && e.key === 'Enter' && !loading) {
+                e.preventDefault();
+                handleGenerate();
+              }
+            }}
             rows={8}
           />
 

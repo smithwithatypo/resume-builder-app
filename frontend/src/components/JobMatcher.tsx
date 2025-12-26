@@ -34,10 +34,16 @@ export default function JobMatcher() {
         placeholder="Paste job description here..."
         value={jobDescription}
         onChange={(e) => setJobDescription(e.target.value)}
+        onKeyDown={(e) => {
+          if ((e.metaKey || e.ctrlKey) && e.key === 'Enter' && !loading) {
+            e.preventDefault();
+            handleMatch();
+          }
+        }}
         rows={10}
       />
 
-      <Button onClick={handleMatch} disabled={loading}>
+      <Button onClick={handleMatch} disabled={loading || !jobDescription}>
         {loading ? 'Matching...' : 'Match Projects'}
       </Button>
       {response && (
