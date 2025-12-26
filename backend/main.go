@@ -34,6 +34,7 @@ func main() {
 	r.Post("/api/summarize", handlers.SummarizeJobDescription)
 	r.Post("/api/chat", handlers.HandleChat)
 	r.Post("/api/projects/match", handlers.MatchProjects)
+	r.Post("/api/cover-letter", handlers.GenerateCoverLetter)
 
 	http.ListenAndServe(":8080", r)
 }

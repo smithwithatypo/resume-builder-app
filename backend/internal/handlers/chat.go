@@ -26,7 +26,7 @@ func HandleChat(w http.ResponseWriter, r *http.Request) {
 	convo := llm.NewConversation(prompt)
 
 	convo.AddUserMessage(req.Message)
-	reply, err := convo.Send()
+	reply, err := convo.Send(llm.ModelHaiku)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return

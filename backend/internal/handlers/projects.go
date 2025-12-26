@@ -29,12 +29,13 @@ func MatchProjects(w http.ResponseWriter, r *http.Request) {
 
 	// build user message
 	userMessage := services.BuildMatchPrompt(req.JobDescription, projects)
-	systemPrompt := "be a helpful assistant"
 
 	// build response
+	var model = llm.ModelHaiku
+	systemPrompt := "be a helpful assistant"
 	convo := llm.NewConversation(systemPrompt)
 	convo.AddUserMessage(userMessage)
-	response, err := convo.Send()
+	response, err := convo.Send(model)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
