@@ -3,9 +3,10 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { useJobDescription } from '@/contexts/JobDescriptionContext';
 
 export default function CoverLetterGenerator() {
-  const [jobDescription, setJobDescription] = useState('');
+  const { jobDescription, setJobDescription } = useJobDescription();
   const [style, setStyle] = useState('startup');
   const [coverLetter, setCoverLetter] = useState('');
   const [loading, setLoading] = useState(false);

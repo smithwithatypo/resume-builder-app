@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { useJobDescription } from '@/contexts/JobDescriptionContext';
 
 export default function JobMatcher() {
-  const [jobDescription, setJobDescription] = useState('');
+  const { jobDescription, setJobDescription } = useJobDescription();
   const [response, setResponse] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 
