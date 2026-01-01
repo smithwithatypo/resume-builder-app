@@ -2,13 +2,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import JobMatcher from './components/JobMatcher';
 import CoverLetter from './components/CoverLetter';
-import { JobDescriptionProvider } from '@/contexts/JobDescriptionContext';
+import { JobProvider } from '@/contexts/JobContext';
 import { ThemeProvider } from "@/components/theme-provider"
 
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <JobDescriptionProvider>
+      <JobProvider>
         <BrowserRouter>
           <NavBar />
           <Routes>
@@ -16,7 +16,7 @@ function App() {
             <Route path="/cover-letter" element={<CoverLetter />} />
           </Routes>
         </BrowserRouter>
-      </JobDescriptionProvider>
+      </JobProvider>
     </ThemeProvider>
   );
 }

@@ -2,11 +2,14 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { useJobDescription } from '@/contexts/JobDescriptionContext';
+import { useJob } from '@/contexts/JobContext';
 
 export default function JobMatcher() {
-  const { jobDescription, setJobDescription } = useJobDescription();
-  const [response, setResponse] = useState<any>(null);
+  const {
+    jobDescription, setJobDescription,
+    resumeOutput, setResumeOutput
+  } = useJob();
+  // const [resumeOutput, setResumeOutput] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 
   const handleMatch = async () => {
@@ -18,7 +21,7 @@ export default function JobMatcher() {
         body: JSON.stringify({ jobDescription })
       });
       const data = await res.json();
-      setResponse(data);
+      setResumeOutput(data);
     } catch (error) {
       console.error('Error:', error);
     } finally {
@@ -46,11 +49,11 @@ export default function JobMatcher() {
       <Button onClick={handleMatch} disabled={loading || !jobDescription}>
         {loading ? 'Matching...' : 'Match Projects'}
       </Button>
-      {response && (
+      {resumeOutput && (
         <div className="space-y-6">
           <h2 className="text-xl font-semibold">Matched Projects:</h2>
 
-          {response.map((project: any) => (
+          {resumeOutput.map((project: any) => (
             <Card key={project.id}>
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>

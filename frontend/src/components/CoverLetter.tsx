@@ -3,13 +3,19 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { useJobDescription } from '@/contexts/JobDescriptionContext';
+import { useJob } from '@/contexts/JobContext';
 import { X } from 'lucide-react';
 
 export default function CoverLetterGenerator() {
-  const { jobDescription, setJobDescription } = useJobDescription();
+  // const { jobDescription, setJobDescription } = useJob();
+  // const [coverLetter, setCoverLetterOutput] = useState('');
+  const {
+    jobDescription,
+    setJobDescription,
+    coverLetterOutput,
+    setCoverLetterOutput
+  } = useJob();
   const [style, setStyle] = useState('startup');
-  const [coverLetter, setCoverLetter] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleGenerate = async () => {
@@ -21,7 +27,7 @@ export default function CoverLetterGenerator() {
         body: JSON.stringify({ jobDescription, style }),
       });
       const data = await response.json();
-      setCoverLetter(data.coverLetter);
+      setCoverLetterOutput(data.coverLetter);
     } catch (error) {
       console.error('Failed to generate cover letter:', error);
     } finally {
@@ -30,7 +36,7 @@ export default function CoverLetterGenerator() {
   };
 
   const handleClear = () => {
-    setCoverLetter("")
+    setCoverLetterOutput("")
   }
 
   return (
@@ -70,7 +76,7 @@ export default function CoverLetterGenerator() {
         </CardContent>
       </Card>
 
-      {coverLetter && (
+      {coverLetterOutput && (
         <Card className="relative">
           <Button
             variant="ghost"
@@ -84,7 +90,7 @@ export default function CoverLetterGenerator() {
             <CardTitle>Your Cover Letter</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="whitespace-pre-wrap">{coverLetter}</p>
+            <p className="whitespace-pre-wrap">{coverLetterOutput}</p>
           </CardContent>
         </Card>
       )}
