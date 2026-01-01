@@ -4,6 +4,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useJobDescription } from '@/contexts/JobDescriptionContext';
+import { X } from 'lucide-react';
 
 export default function CoverLetterGenerator() {
   const { jobDescription, setJobDescription } = useJobDescription();
@@ -27,6 +28,10 @@ export default function CoverLetterGenerator() {
       setLoading(false);
     }
   };
+
+  const handleClear = () => {
+    setCoverLetter("")
+  }
 
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
@@ -66,7 +71,15 @@ export default function CoverLetterGenerator() {
       </Card>
 
       {coverLetter && (
-        <Card>
+        <Card className="relative">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute top-[-11px] left-[-11px] h-6 w-6 rounded-full"
+            onClick={handleClear}
+          >
+            <X className="h-4 w-4" />
+          </Button>
           <CardHeader>
             <CardTitle>Your Cover Letter</CardTitle>
           </CardHeader>
