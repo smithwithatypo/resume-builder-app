@@ -29,8 +29,8 @@ export default function JobMatcher() {
   };
 
   return (
-    <div className="p-8 max-w-4xl mx-auto space-y-4">
-      <h1 className="text-2xl font-bold">Job Matcher</h1>
+    <div className="max-w-4xl mx-auto p-6 space-y-6">
+      <h1 className="text-2xl font-bold">Resume Matcher</h1>
 
       <Textarea
         placeholder="Paste job description here..."
@@ -42,7 +42,7 @@ export default function JobMatcher() {
             handleMatch();
           }
         }}
-        rows={10}
+        rows={8}
       />
 
       <Button onClick={handleMatch} disabled={loading || !jobDescription}>

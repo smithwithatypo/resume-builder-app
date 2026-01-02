@@ -38,30 +38,23 @@ export default function Summarize() {
 
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
-      <Card>
-        <CardHeader>
-          <CardTitle>Summary Generator </CardTitle>
-          <CardDescription>Paste job description</CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <Textarea
-            placeholder="Paste job description here..."
-            value={jobDescription}
-            onChange={(e) => setJobDescription(e.target.value)}
-            onKeyDown={(e) => {
-              if ((e.metaKey || e.ctrlKey) && e.key === 'Enter' && !loading) {
-                e.preventDefault();
-                handleSummarize();
-              }
-            }}
-            rows={8}
-          />
+      <h1 className="text-2xl font-bold">Summarizer</h1>
+      <Textarea
+        placeholder="Paste job description here..."
+        value={jobDescription}
+        onChange={(e) => setJobDescription(e.target.value)}
+        onKeyDown={(e) => {
+          if ((e.metaKey || e.ctrlKey) && e.key === 'Enter' && !loading) {
+            e.preventDefault();
+            handleSummarize();
+          }
+        }}
+        rows={8}
+      />
 
-          <Button onClick={handleSummarize} disabled={loading || !jobDescription}>
-            {loading ? 'Generating...' : 'Generate Summary'}
-          </Button>
-        </CardContent>
-      </Card>
+      <Button onClick={handleSummarize} disabled={loading || !jobDescription}>
+        {loading ? 'Generating...' : 'Generate Summary'}
+      </Button>
 
       {summary && (
         <Card className="relative">
