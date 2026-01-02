@@ -59,7 +59,7 @@ export default function JobMatcher() {
                 <CardTitle>{project.title}</CardTitle>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {project.keywords.map((keyword: any, i: number) => (
-                    <span key={i} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                    <span key={i} className="bg-secondary text-secondary-foreground text-xs px-2 py-1 rounded">
                       {keyword}
                     </span>
                   ))}
@@ -67,18 +67,17 @@ export default function JobMatcher() {
               </CardHeader>
 
               <CardContent className="space-y-4">
-                <p className="text-gray-700 italic">{project.summary}</p>
-
+                <p className="text-muted-foreground italic">{project.summary}</p>
                 <div className="space-y-3">
                   {project.bulletpoints.map((bullet: any, i: number) => (
-                    <div key={i} className="pl-4 border-l-2 border-gray-300 space-y-1">
+                    <div key={i} className="pl-4 border-l-2 border-border space-y-1">
                       <p className="text-sm">
                         <span className="font-semibold">Result:</span> {bullet.result}
                       </p>
-                      <p className="text-sm text-green-700">
+                      <p className="text-sm text-green-600 dark:text-green-400">
                         <span className="font-semibold">Metric:</span> {bullet.metric}
                       </p>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-muted-foreground">
                         <span className="font-semibold">Action:</span> {bullet.action}
                       </p>
                     </div>
