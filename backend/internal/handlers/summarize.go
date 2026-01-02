@@ -28,9 +28,9 @@ func SummarizeJobDescription(w http.ResponseWriter, r *http.Request) {
 
 	message, err := client.Messages.New(context.TODO(), anthropic.MessageNewParams{
 		Model:     anthropic.ModelClaudeHaiku4_5,
-		MaxTokens: 500,
+		MaxTokens: 1000,
 		Messages: []anthropic.MessageParam{
-			anthropic.NewUserMessage(anthropic.NewTextBlock("Summarize this job description in 2-3 sentences:\n\n" + req.JobDescription)),
+			anthropic.NewUserMessage(anthropic.NewTextBlock("Summarize this job description in 1 sentence highlighting the most important skills needed and 1 sentence of ATS keywords:\n\n" + req.JobDescription)),
 		},
 	})
 

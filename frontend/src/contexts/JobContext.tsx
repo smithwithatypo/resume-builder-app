@@ -7,6 +7,8 @@ interface JobContextType {
   setResumeOutput: (value: any) => void;
   coverLetterOutput: string;
   setCoverLetterOutput: (value: string) => void;
+  summary: string;
+  setSummary: (value: string) => void;
 }
 
 const JobContext = createContext<JobContextType | undefined>(undefined);
@@ -15,6 +17,7 @@ export function JobProvider({ children }: { children: ReactNode }) {
   const [jobDescription, setJobDescription] = useState('');
   const [resumeOutput, setResumeOutput] = useState<any>(null);
   const [coverLetterOutput, setCoverLetterOutput] = useState('');
+  const [summary, setSummary] = useState('');
 
   return (
     <JobContext.Provider value={{
@@ -24,6 +27,8 @@ export function JobProvider({ children }: { children: ReactNode }) {
       setResumeOutput,
       coverLetterOutput,
       setCoverLetterOutput,
+      summary,
+      setSummary
     }}>
       {children}
     </JobContext.Provider>

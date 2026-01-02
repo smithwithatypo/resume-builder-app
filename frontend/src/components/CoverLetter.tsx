@@ -7,8 +7,6 @@ import { useJob } from '@/contexts/JobContext';
 import { X } from 'lucide-react';
 
 export default function CoverLetterGenerator() {
-  // const { jobDescription, setJobDescription } = useJob();
-  // const [coverLetter, setCoverLetterOutput] = useState('');
   const {
     jobDescription,
     setJobDescription,

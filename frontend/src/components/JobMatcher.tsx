@@ -9,7 +9,6 @@ export default function JobMatcher() {
     jobDescription, setJobDescription,
     resumeOutput, setResumeOutput
   } = useJob();
-  // const [resumeOutput, setResumeOutput] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 
   const handleMatch = async () => {

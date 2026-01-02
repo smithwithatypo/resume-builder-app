@@ -17,6 +17,15 @@ export default function NavBar() {
                 location.pathname === "/" ? "text-foreground" : "text-muted-foreground"
               )}
             >
+              Summarize
+            </Link>
+            <Link
+              to="/job-matcher"
+              className={cn(
+                "text-sm font-medium transition-colors hover:text-primary",
+                location.pathname === "/job-matcher" ? "text-foreground" : "text-muted-foreground"
+              )}
+            >
               Resume Matcher
             </Link>
             <Link
