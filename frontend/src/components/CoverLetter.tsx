@@ -16,6 +16,7 @@ export default function CoverLetterGenerator() {
     setCoverLetterOutput
   } = useJob();
   const [style, setStyle] = useState('startup');
+  const [modelChoice, setModelChoice] = useState('fast')
   const [loading, setLoading] = useState(false);
 
   const handleGenerate = async () => {
@@ -24,7 +25,7 @@ export default function CoverLetterGenerator() {
       const response = await fetch('http://localhost:8080/api/cover-letter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ jobDescription, style }),
+        body: JSON.stringify({ jobDescription, style, modelChoice }),
       });
       const data = await response.json();
       setCoverLetterOutput(data.coverLetter);
@@ -60,15 +61,27 @@ export default function CoverLetterGenerator() {
             rows={8}
           />
 
-          <Select value={style} onValueChange={setStyle}>
-            <SelectTrigger>
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="startup">Startup (concise)</SelectItem>
-              <SelectItem value="government">Government/Corporate (formal)</SelectItem>
-            </SelectContent>
-          </Select>
+          <div className='flex gap-4'>
+            <Select value={style} onValueChange={setStyle}>
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="startup">Short</SelectItem>
+                <SelectItem value="government">Long</SelectItem>
+              </SelectContent>
+            </Select>
+
+            <Select value={modelChoice} onValueChange={setModelChoice}>
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="fast">Fast</SelectItem>
+                <SelectItem value="smart">Smart</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
 
           <Button onClick={handleGenerate} disabled={loading || !jobDescription}>
             {loading ? 'Generating...' : 'Generate Cover Letter'}
@@ -81,7 +94,7 @@ export default function CoverLetterGenerator() {
           <Button
             variant="ghost"
             size="icon"
-            className="absolute top-[-11px] left-[-11px] h-6 w-6 rounded-full"
+            className="absolute top-[-11px] left-[-11px] h-7 w-7 rounded-full"
             onClick={handleClear}
           >
             <X className="h-4 w-4" />

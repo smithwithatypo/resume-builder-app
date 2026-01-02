@@ -10,15 +10,22 @@ import (
 )
 
 type CoverLetterStyle string
+type ModelChoice string
 
 const (
 	StyleStartup    CoverLetterStyle = "startup"
 	StyleGovernment CoverLetterStyle = "government"
 )
 
+const (
+	ModelChoiceFast  ModelChoice = "fast"
+	ModelChoiceSmart ModelChoice = "smart"
+)
+
 type CoverLetterRequest struct {
 	JobDescription string           `json:"jobDescription"`
 	Style          CoverLetterStyle `json:"style"`
+	ModelChoice    ModelChoice      `json:"modelChoice"`
 }
 
 type CoverLetterResponse struct {
@@ -45,7 +52,13 @@ func GenerateCoverLetter(w http.ResponseWriter, r *http.Request) {
 
 	// build response
 	var model = llm.ModelHaiku
-	systemPrompt := "You are an expert career coach who writes compelling cover letters."
+	if req.ModelChoice == "fast" {
+		model = llm.ModelHaiku
+	}
+	if req.ModelChoice == "smart" {
+		model = llm.ModelSonnet
+	}
+	systemPrompt := "You are an expert career coach who writes compelling cover letters using Strunk's Elements of Style."
 	convo := llm.NewConversation(systemPrompt)
 	convo.AddUserMessage(userMessage)
 	response, err := convo.Send(model)
