@@ -5,6 +5,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useJob } from '@/contexts/JobContext';
 import { X } from 'lucide-react';
+import ReactMarkdown from 'react-markdown'
 
 export default function Summarize() {
   const {
@@ -70,7 +71,11 @@ export default function Summarize() {
             <CardTitle>Your Summary</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="whitespace-pre-wrap">{summary}</p>
+            <div className="whitespace-pre-wrap">
+              <ReactMarkdown>
+                {summary}
+              </ReactMarkdown>
+            </div>
           </CardContent>
         </Card>
       )}
